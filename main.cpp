@@ -83,7 +83,7 @@ bool isBFSPath(int startR, int startC, int endR, int endC, int maze[][MAZE_SIZE]
 		// for each adjacent node, check if it's visited
 		// if visited, skip. otherwise add to queue
 
-		if (maze[currC+1][currC] == 0 && currR+1 < MAZE_SIZE && !isVisited(currR+1, currC, visited))
+		if (maze[currR+1][currC] == 0 && currR+1 < MAZE_SIZE && !isVisited(currR+1, currC, visited))
 		{
 			string coordinate = to_string(currR+1) + to_string(currC);
 			myQueue.enqueue(coordinate);
